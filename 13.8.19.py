@@ -1,14 +1,14 @@
-tikets = int(input('Введите количество билетов: '))
+tickets = int(input('Enter the number of tickets: '))
 count = 0
-age = [int(input('Введите возраст: ')) for i in range(tikets)]
-for i in range(tikets):
+age = [int(input('Age of visitor: ')) for i in range(tickets)]
+for i in range(tickets):
     if age[i] < 18:
         count += 0
     elif 18 <= age[i] < 25:
         count += 900
     elif age[i] >= 25:
         count += 1390
-if tikets > 3:
-    print(f'Сумма к оплате {count * 0.9} руб.')
+if tickets > 3:
+    print(f'Total sum - {count * 0.9} RUB')
 else:
-    print(f'Cумма к оплате {count} руб.')
+    print(f'Total sum - {count} RUB')
